@@ -26,12 +26,12 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group_id|integer|null: false, foreign_key: true|
+|group-name_id|integer|null: false, foreign_key: true|
 
 ### Association
 - has_many :groups, through :groups_users
 - has_many :groups_users
-- belongs_to :message
+- has_many :message
 
 ## messageテーブル
 
@@ -39,9 +39,9 @@
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-|text|integer|null: false, foreign_key: true|
-|image|integer|null: false, foreign_key: true|
+|text|integer|foreign_key: true|
+|image|integer|foreign_key: true|
 
 ### Association
-- has_many :groups
-- belongs_to :users
+- belongs_to :groups
+- belongs_to :user
