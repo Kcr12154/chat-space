@@ -102,14 +102,14 @@
   width: calc(100vw - 300px);
 }
 
-.main-contents{
+.main-contents {
   height: 100px;
   width: calc(100vw - 300px);
   border: solid 1px #eeeeee;
-}
 
-.main-contents__left-box{
-  display: flex;
+  &__left-box {
+    display: flex;
+  }
 }
 
 .main-right{
