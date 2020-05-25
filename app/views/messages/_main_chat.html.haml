@@ -1,0 +1,26 @@
+.main-chat
+  .main-contents
+    .main-contents__left-box
+      .main-left-ue-box
+        test
+        .main-left-sita-box
+          mamber : rituka
+      .main-right
+        Edit
+
+  .main-line
+    .main-line-date
+      .main-line-laft
+        りつかチャンネル
+      .main-line-right
+        2019/11/12(Tue)10:10:01
+    .main-text
+      いい天気！今日も作業やる！
+
+  %form.main-footer
+    .footer-laft
+      %input{type:"text",class:"footter-laft_text",placeholder:"type a message"}
+      %label{class:"footer-laft_image"}
+        = icon('fas','image')
+        %input{type:"file",class:"footer-laft_image_file"}
+    %input{type:"submit",class:"footer-right",value:"send"}
