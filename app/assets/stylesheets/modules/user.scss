@@ -25,6 +25,7 @@
       font-size: 40px;
       font-weight: 200;
 
+      &:after {
         content: '';
         display: block;
         width: 60px;
