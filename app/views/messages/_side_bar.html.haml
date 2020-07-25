@@ -10,12 +10,13 @@
         .icon-right 
           = link_to edit_user_path(current_user) do
             =icon('fas', 'cog', class: 'icon')
-  .groups
-    - current_user.groups.each do |group|
-      .side-over
-        = link_to '#' do
-          = group.name
-      .side-under
-        まだメッセージがありません
 
-        
+
+            .groups
+    - current_user.groups.each do |group|
+      .side-over__groups-group
+        = link_to group_messages_path(group) do
+          .side-over__groups-group-name
+            = group.name
+          .side-under__groups-group-massage
+            = group.show_last_message

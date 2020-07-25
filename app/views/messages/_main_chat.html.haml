@@ -17,10 +17,14 @@
     .main-text
       いい天気！今日も作業やる！
 
-  %form.main-footer
-    .footer-laft
-      %input{type:"text",class:"footter-laft_text",placeholder:"type a message"}
-      %label{class:"footer-laft_image"}
-        = icon('fas','image')
-        %input{type:"file",class:"footer-laft_image_file"}
-    %input{type:"submit",class:"footer-right",value:"send"}
+    .messages
+      = render @messages
+
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: "footter-laft_text",placeholder:"type a message"
+        .footer-laft
+          = f.label :image, class:"footer-laft_image" do
+            = icon('fas','image', class: 'icon')
+            = f.file_field :image, class: "hidden"
+        = f.submit 'Send', class: "submit"
